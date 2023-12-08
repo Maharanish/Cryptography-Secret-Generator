@@ -14,10 +14,3 @@ class RSA:
 
     def dekripsi(self, ciphertext):
         return pow(ciphertext, self.private_key, self.n)
-
-# Example usage:
-# rsa_instance = RSA(p=47, q=71, public_key=79)
-# enkripsied_message = rsa_instance.enkripsi(42)  # 42 is just an example message
-# dekripsied_message = rsa_instance.dekripsi(enkripsied_message)
-# print("enkripsied:", enkripsied_message)
-# print("dekripsied:", dekripsied_message)

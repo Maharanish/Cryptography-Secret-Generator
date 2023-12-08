@@ -7,7 +7,7 @@ class CaesarCipher:
         for char in plaintext:
             if char.isalpha():
                 ascii_offset = ord('a') if char.islower() else ord('A')
-                result += chr((ord(char) - ascii_offset + self.shift) % 26 + ascii_offset)
+                result += chr((ord(char) - ascii_offset - self.shift) % 26 + ascii_offset)
             else:
                 result += char
         return result
@@ -21,3 +21,4 @@ class CaesarCipher:
             else:
                 result += char
         return result
+
